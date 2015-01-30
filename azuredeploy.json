@@ -62,15 +62,7 @@
       dependsOn: [
         "[concat('Microsoft.Web/serverFarms/', parameters('hostingPlanName'))]"
       ],
-      tags: {
-        "[
-          concat('hidden-related:',
-          resourceGroup().id,
-          '/providers/Microsoft.Web/serverfarms/',
-          parameters('hostingPlanName'))
-        ]": "empty"
-      },
-      properties: {
+    properties: {
         name: "[parameters('siteName')]",
         serverFarm: "[parameters('hostingPlanName')]"
       },
