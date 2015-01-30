@@ -63,12 +63,12 @@
         "[concat('Microsoft.Web/serverFarms/', parameters('hostingPlanName'))]"
       ],
       tags: {
-        [
+        "[
           concat('hidden-related:',
           resourceGroup().id,
           '/providers/Microsoft.Web/serverfarms/',
           parameters('hostingPlanName'))
-        ]: "empty"
+        ]": "empty"
       },
       properties: {
         name: "[parameters('siteName')]",
